@@ -12,11 +12,8 @@ Video url: https://drive.google.com/file/d/1_S9suBKvhtBn5OlTIjmybcANJiwVzoUC/vie
 
 
 Getting Started
- * Go to folder.
  * Open VS Code editor.
  * Open Project folder in VS Code.
- * Open Command line in Vs code.
- * Type cd public
  * Run following command.
  * npm install
  * Run command: npm start.

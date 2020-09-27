@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
-import "./index";
-class Login extends Component {
+
+class Signup extends Component {
   render() {
     return (
       <div className="center">
-        <h1>Login</h1>
+        <h1>SignUp</h1>
         <Form>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="name" placeholder="Enter name" />
+          </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
@@ -16,9 +20,12 @@ class Login extends Component {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Confirm Password</Form.Label>
+            <Form.Control type="password" placeholder="Confirm Password" />
+          </Form.Group>
           <Button variant="primary" type="submit">
-            Login
+            SignUp
           </Button>
         </Form>
       </div>
@@ -26,4 +33,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Signup;

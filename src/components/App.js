@@ -7,74 +7,24 @@ import {
   Redirect,
 } from "react-router-dom";
 import { connect } from "react-redux";
-
-import { Login, Navbar, Home, Task, User } from "./index";
-import { logina } from "../actions/auth";
-const PrivateRoute = (privateRouteProps) => {
-  const {
-    isLoggedin,
-    path,
-    component: Component,
-    dispatch,
-  } = privateRouteProps;
-
-  return (
-    <Route
-      path={path}
-      render={(props) => {
-        console.log("props", props);
-        console.log("isLoggedin", isLoggedin);
-        return isLoggedin ? (
-          <Component {...props} dispatch={dispatch} />
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/",
-              state: {
-                from: props.location,
-              },
-            }}
-          />
-        );
-      }}
-    />
-  );
-};
+import { Navbar, Home, Login, SignUp } from "./index";
 class App extends Component {
-  componentDidMount() {
-    const token = localStorage.getItem("id");
-    if (token) {
-      this.props.dispatch(logina());
-    }
-  }
+  componentDidMount() {}
 
   render() {
     const { auth } = this.props;
-    console.log(this.props.dispatch);
+
     return (
-      <Router>
-        <Navbar auth={auth} />
-        <Switch>
-          <Route path="/" exact component={Login} />
-          <PrivateRoute
-            path="/home"
-            component={Home}
-            isLoggedin={auth.isLoggedin}
-          />
-          <PrivateRoute
-            path="/task"
-            component={Task}
-            dispatch={this.props.dispatch}
-            isLoggedin={auth.isLoggedin}
-          />
-          <PrivateRoute
-            path="/user"
-            component={User}
-            dispatch={this.props.dispatch}
-            isLoggedin={auth.isLoggedin}
-          />
-        </Switch>
-      </Router>
+      <div>
+        <Router>
+          <Navbar auth={auth} />
+          <Switch>
+            <Route path="/login" exact component={Login} />
+            <Route path="/signup" exact component={SignUp} />
+            <Route path="/home" exact component={Home} />
+          </Switch>
+        </Router>
+      </div>
     );
   }
 }

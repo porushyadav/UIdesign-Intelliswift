@@ -7,88 +7,58 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.App {
-  text-align: center;
-  background-color: #ffffff;
+.form-inline {
+  width: 100%;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(20px + 2vmin);
-  color: white;
+.form-group {
+  width: 90%;
 }
 
-.Login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid lightgray;
-  padding: 50px;
+.input-group {
+  width: 90% !important;
 }
 
-.Button {
-  padding: 40px;
-}
-.size {
-  width: 400px;
-}
-.heading {
-  color: black;
+.form-control {
+  width: 80% !important;
 }
 
-.fontSize {
-  font-size: 20px;
+span.input-group-addon {
+  width: 80px !important;
 }
-#changePassword {
-  padding: 15px 30px;
-  margin-left: 50px;
-}
-#logout {
-  padding: 15px 30px;
-
-  margin-left: 50px;
+.right {
+  float: right;
 }
 
 .center {
-  width: 70rem;
-  margin-top: 50px;
-  margin-left: 40px;
-}
-
-.addtask {
-  margin-left: 10rem;
-  margin-top: 5rem;
-  padding: 20px;
-  bottom: 2;
-  left: 10;
-  width: 150px;
-}
-
-.addtask button {
-  padding: 12px 30px;
-}
-
-.dropdown {
+  max-width: 800px;
+  min-width: 300px;
   margin: auto;
-  width: 200px;
-  height: 200px;
-  margin-top: 50px;
+
+  padding: 20px;
 }
-.dropdown select {
-  width: 200px;
-  height: 50px;
+.setTime {
+  font-size: 25px;
+}
+.setTime1 {
   font-size: 20px;
 }
-.Information {
-  width: 600px;
-  margin: auto;
+
+.submit {
+  max-width: 100px;
+  min-width: 10rem;
+  min-height: 3rem;
+
+  height: 2rem;
+}
+
+.display {
+  display: inline-block;
+}
+
+h1 {
+  font-size: 50px;
+}
+.inputbox {
+  width: 100px;
 }
